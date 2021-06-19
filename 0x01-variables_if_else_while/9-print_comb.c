@@ -23,6 +23,7 @@ else
 {
 putchar(36);
 }
+}
 putchar('\n');
 return (0);
 }
