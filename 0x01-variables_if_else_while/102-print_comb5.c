@@ -29,6 +29,7 @@ putchar(d);
 if (a != 57 && b < 57)
 {
 putchar(',');
+putchar(' ');
 }
 }
 }
