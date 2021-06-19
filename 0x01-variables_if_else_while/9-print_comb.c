@@ -19,10 +19,6 @@ for (b = 44; b > 31; b -= 12)
 putchar(b);
 }
 }
-else if (a == 57)
-{
-putchar(36);
-}
 }
 putchar('\n');
 return (0);
