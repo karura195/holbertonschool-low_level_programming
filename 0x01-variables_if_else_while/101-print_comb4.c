@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
-* main - Prints all combinations of two digits
-* with the two being different
+* main - Prints all combinations of three digits
+* with the three being different
 * Return: 0
 */
 
