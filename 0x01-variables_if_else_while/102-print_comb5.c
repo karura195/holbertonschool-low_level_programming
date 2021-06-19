@@ -19,14 +19,14 @@ for (c = 48; c < 58; c++)
 {
 for (d = 48; d < 58; d++)
 {
-if (c + d > a + b)
+if (c + d > a + b || d == 0)
 {
 putchar(a);
 putchar(b);
 putchar(' ');
 putchar(c);
 putchar(d);
-if (a + b != 113)
+if (a + b != 113 || a < 57)
 {
 putchar(',');
 putchar(' ');
