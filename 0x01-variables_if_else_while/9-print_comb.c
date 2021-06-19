@@ -19,7 +19,7 @@ for (b = 44; b > 31; b -= 12)
 putchar(b);
 }
 }
-else
+else if (a == 57)
 {
 putchar(36);
 }
