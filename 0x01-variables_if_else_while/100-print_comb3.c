@@ -20,7 +20,7 @@ if (a < b)
 putchar(a);
 putchar(b);
 }
-if (a < 57)
+if (a < 56 && a < b)
 {
 putchar(',');
 putchar(' ');
