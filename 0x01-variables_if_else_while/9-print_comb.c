@@ -12,7 +12,7 @@ int a;
 for (a = 48; a < 58; a++)
 {
 putchar(a);
-putchar(', ');
+putchar(44' ');
 }
 putchar(36);
 putchar('\n');
