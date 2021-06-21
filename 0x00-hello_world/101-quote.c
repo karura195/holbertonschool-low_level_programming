@@ -3,11 +3,11 @@
 
 /**
 * main - Prints the indicated phrase without using printf or puts
-* Return: 0
+* Return: phrase
 */
 
 int main(void)
 {
 write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-return (0);
+return (1);
 }
