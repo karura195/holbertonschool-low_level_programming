@@ -19,14 +19,14 @@ for (c = 48; c < 58; c++)
 {
 for (d = 48; d < 58; d++)
 {
-if ((a > c) || (a == c && b < d))
+if (a < c || (a == c && b < d))
 {
 putchar(a);
 putchar(b);
 putchar(32);
 putchar(c);
 putchar(d);
- if ((a < 57 && b <= 57) || (a == 57 && b < 56))
+if ((a < 57 && b <= 57) || (a == 57 && b < 56))
 {
 putchar(44);
 putchar(32);
