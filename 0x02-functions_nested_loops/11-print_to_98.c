@@ -37,4 +37,8 @@ int i;
 		}
 	}
 	}
+	else
+	{
+		printf("%d\n", n);
+	}
 }
