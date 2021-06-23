@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * main - Prints the word Holberton
- * return: 0
+ * main - prints the word Holberton
+ * Return: 0
  */
 
 int main(void)
