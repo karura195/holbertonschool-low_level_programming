@@ -8,62 +8,32 @@
 
 int main(void)
 {
-	int i; /* counter */
-	int a, b; /* tens and units */
+	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
-		a = i / 10;
-		b = i % 10;
-
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			putchar('F');
-			putchar('i');
-			putchar('z');
-			putchar('z');
-			putchar('B');
-			putchar('u');
-			putchar('z');
-			putchar('z');
-			putchar(' ');
+			printf("FizzBuzz ");
 		}
 		else if (i % 3 == 0 && i % 5 != 0)
 		{
-			putchar('F');
-			putchar('i');
-			putchar('z');
-			putchar('z');
-			putchar(' ');
+			printf("Fizz ");
 		}
 		else if (i % 5 == 0 && i % 3 != 0)
 		{
 			if (i == 100)
 			{
-				putchar('B');
-				putchar('u');
-				putchar('z');
-				putchar('z');
+				printf("Buzz");
 			}
 			else
 			{
-				putchar('B');
-				putchar('u');
-				putchar('z');
-				putchar('z');
-				putchar(' ');
+				printf("Buzz ");
 			}
-		}
-		else if (i < 10)
-		{
-			putchar('0' + i);
-			putchar(' ');
 		}
 		else
 		{
-			putchar('0' + a);
-			putchar('0' + b);
-			putchar(' ');
+			printf("%d ", i);
 		}
 	}
 	printf("\n");
