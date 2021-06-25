@@ -8,14 +8,35 @@
 
 void print_number(int n)
 {
+	int b, c, i;
+	int base;
+	int digit;
+	unsigned int num_copy;
+	unsigned int num;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
-	if (n / 10)
+	else
 	{
-		print_number(n / 10);
+		num = n;
 	}
-	_putchar(n % 10 + '0');
-}
+	num_copy = num;
+
+	b = 1;
+
+	while (num / 10 >= 1)/*contador de digitos = b */
+	{
+		num = num / 10;
+		b++;
+	}
+
+	for (i = b; i > 0; i--)
+	{
+		base = calcularBase(i - 1);
+		c = (num_copy / base);
+		digit = (num_copy / base) % 10;
+		_putchar('0' + digit);
+	}
