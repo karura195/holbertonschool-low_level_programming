@@ -19,7 +19,7 @@ void rev_string(char *s)
 		i++;
 	}
 
-	if (i > 0)
+	if (i >= 0)
 	{
 	for (j = i - 1; j >= (i - 1) / 2; j--)
 	{
