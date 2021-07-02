@@ -8,18 +8,13 @@
 
 char *string_toupper(char *str)
 {
-	int i, j;
+	int i;
 
-	while (*(str + i) != '\0')
+	for (i = 0; *(str + i) != '\0'; i++)
 	{
-		i++;
-	}
-
-	for (j = 0; j < i - 1; j++)
-	{
-		if (*(str + j) > 96 && *(str + j) < 123)
+		if (*(str + i) > 96 && *(str + i) < 123)
 		{
-			*(str + j) = *(str + j) - 32;
+			*(str + i) = *(str + i) - 32;
 		}
 	}
 return (str);

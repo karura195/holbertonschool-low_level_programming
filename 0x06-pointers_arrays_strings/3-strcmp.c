@@ -4,49 +4,27 @@
  * _strcmp - compares two strings
  * @s1: first string to compare
  * @s2: second string to compare
- * Return: 1 if s1>s2, -1 if s1<s2, 0 if s1=s2
+ * Return: the difference between the strings
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
-	int a;
+	int i;
 
-	while (*(s1 + i) != '\0')
+	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
-		i++;
-	}
-
-	while (*(s2 + j) != '\0')
-	{
-		j++;
-	}
-
-	if (i > j)
-	{
-		return (1);
-	}
-	else if (i < j)
-	{
-		return (-1);
-	}
-	else
-	{
-		for (a = 0; a < i; a++)
+		if (*(s2 + i) == '\0')
 		{
-			if (*(s1 + a) == *(s2 + a))
-			{
-				return (0);
-			}
-			else if (*(s1 + a) > *(s2 + a))
-			{
-				return (1);
-			}
-			else
-			{
-				return (-1);
-			}
+			return (s1[i]);
+		}
+		if (*(s2 + i) != *(s1 + i))
+		{
+			return (s1[i] - s2[i]);
 		}
 	}
+	if (*(s2 + i) != '\0')
+	{
+		return (0 - s2[i]);
+	}
+return (0);
 }
