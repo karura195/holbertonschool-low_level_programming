@@ -26,6 +26,10 @@ char *cap_string(char *str)
 		{
 			*(str + j + 1) = *(str + j + 1) - 32;
 		}
+		if (*str > 96 && *str < 123)
+		{
+			*str = *str - 32;
+		}
 	}
 return (str);
 }
