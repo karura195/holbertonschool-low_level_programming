@@ -15,7 +15,6 @@ int main(int argc, char **argv)
 	if (argc == 1)
 	{
 		printf("0\n");
-		exit(EXIT_FAILURE);
 	}
 
 	for (i = 1; i < argc; i++)
@@ -23,7 +22,7 @@ int main(int argc, char **argv)
 		if (atoi(*(argv + i)) == 0)
 		{
 			printf("Error\n");
-			exit(EXIT_FAILURE);
+			return (1);
 		}
 		else
 		{
@@ -31,6 +30,6 @@ int main(int argc, char **argv)
 		}
 	}
 	printf("%d\n", add);
-	exit(EXIT_SUCCESS);
+	return (0);
 }
 
