@@ -7,7 +7,7 @@
 
 int str_lenght(char *str)
 {
-	int a;
+	int a = 0;
 
 	while (*(str + a) != '\0')
 	{
@@ -29,7 +29,7 @@ int str_lenght(char *str)
 char *str_concat(char *s1, char *s2)
 {
 	char *array;
-	int i = 0, j = 0, k, l;
+	int i, j, k, l;
 
 	if (s1 == NULL && s2 == NULL)
 	{
@@ -49,9 +49,9 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		j = str_lenght(s2) + 1;
+		j = str_lenght(s2);
 	}
-	array = malloc((i + j) * sizeof(char));
+	array = malloc((i + j + 1) * sizeof(char));
 	if (array == NULL)
 	{
 		return (NULL);
