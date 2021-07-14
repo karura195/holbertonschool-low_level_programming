@@ -1,4 +1,21 @@
 #include <stdlib.h>
+/**
+ * str_lenght  - gives the lenght of a string
+ * @str: string
+ * Return: lenght
+ */
+
+int str_lenght(char *str)
+{
+	int a;
+
+	while (*(str + a) != '\0')
+	{
+		a++;
+	}
+	return (a);
+}
+
 
 /**
  * str_concat - The returned pointer should point to
@@ -12,27 +29,29 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *array;
-	int i = 0;
-	int j = 0;
-	int k, l;
+	int i = 0, int j = 0, k, l;
 
 	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
-
-	while (*(s1 + i) != '\0')
+	if (s1 == NULL)
 	{
-		i++;
+		i = 0;
 	}
-	while (*(s2 + j) != '\0')
+	else
 	{
-		j++;
+		i = str_lenght(s1);
 	}
-	j++;
-
+	if (s2 == NULL)
+	{
+		j = 0;
+	}
+	else
+	{
+		j = str_lenght(s2) + 1;
+	}
 	array = malloc((i + j) * sizeof(char));
-
 	if (array == NULL)
 	{
 		return (NULL);
