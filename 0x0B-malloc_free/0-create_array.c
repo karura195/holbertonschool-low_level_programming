@@ -5,12 +5,12 @@
  * it with a specific char
  * @size: size of array
  * @c: char
- * Return: buffer
+ * Return: array
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char *buffer;
+	char *array;
 	unsigned int i;
 
 	if (size == 0)
@@ -18,15 +18,15 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	buffer = malloc(size * sizeof(char));
+	array = malloc(size * sizeof(char));
 
 	if (size != 0)
 	{
 		for (i = 0; i < size; i++)
 		{
-			*(buffer + i) = c;
+			*(array + i) = c;
 		}
 	}
-	free(buffer);
-	return (buffer);
+
+	return (array);
 }
