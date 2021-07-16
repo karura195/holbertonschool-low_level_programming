@@ -2,6 +2,23 @@
 #include<stdlib.h>
 
 /**
+ * _strlen - returns the length of a string
+ * @s: string to analyze
+ * Return: i, length of s
+ */
+
+unsigned int _strlen(char *s)
+{
+	unsigned int i = 0;
+
+	while (*(s + i) != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * string_nconcat - the returned pointer shall point to a newly
  * allocated space in memory, which contains s1, followed by the
  * first n bytes of s2, and null terminated
@@ -14,40 +31,37 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int i, j, k;
+	unsigned int i, j;
 
-	if (s1 == NULL)
+	if (n >= _strlen(s2))
 	{
-		i = 0;
+		n = _strlen(s2);
 	}
-	else
-	{
-		while (*(s1 + i) != '\0')
-		{
-			i++;
-		}
-	}
-	str = malloc((i + n) * sizeof(char));
+	str = malloc((_strlen(s1) + n + 1) * sizeof(char));
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (j = 0 ; j < i; j++)
+	for (i = 0; i < _strlen(s1) + n; i++)
 	{
-		*(str + j) = *(s1 + j);
-	}
-	if (s2 == NULL)
-	{
-		*(str + j) = '\0';
-		return (str);
-	}
-	else
-	{
-		for (k = 0 ; (*(s2 + k) != '\0') && (k < n) ; k++)
+		if (s1 == NULL && n != 0)
 		{
-			*(str + (i + k)) = *(s2 + k);
+			*(str + i) = *(s2 + i);
+		}
+		else if (n == 0 && s1 != NULL)
+		{
+			*(str + i) = *(s1 + i);
+		}
+		else if (i < _strlen(s1))
+		{
+			*(str + i) = *(s1 + i);
+		}
+		else
+		{
+			*(str + i) = *(s2 + j);
+			j++;
 		}
 	}
-	*(str + (i + k)) = '\0';
+	*(str + i) = '\0';
 	return (str);
 }
