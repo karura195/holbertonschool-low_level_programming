@@ -38,6 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (s2 == NULL)
 	{
+		*(str + j) = '\0';
 		return (str);
 	}
 	else
@@ -47,5 +48,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			*(str + (i + k)) = *(s2 + k);
 		}
 	}
+	*(str + (i + k)) = '\0';
 	return (str);
 }
