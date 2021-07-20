@@ -3,7 +3,7 @@
 /**
  * print_dog: prints dog's info
  * @d: struct
- * 
+ *
  * Return: void
  */
 
