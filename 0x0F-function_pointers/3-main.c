@@ -17,14 +17,14 @@ int main(int argc, char **argv)
 	{
 		printf("Error\n");
 		exit(98);
-	}
+	}	
+
+	f = get_op_func(*(argv + 2));
 	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	f = get_op_func(*(argv + 2));
 	result = f(atoi(*(argv + 1)), atoi(*(argv + 3)));
 	printf("%d\n", result);
 	return (0);
