@@ -51,7 +51,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	}
 	else if (_pow(2, index) > *n)
 	{
-		break;
+		return (1);
 	}
 	else
 	{
