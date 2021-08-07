@@ -49,6 +49,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	else
 	{
 		*n = *n + _pow(2, index);
-		return (*n);
+		return (1);
 	}
 }
