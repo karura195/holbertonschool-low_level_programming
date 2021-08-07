@@ -45,7 +45,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	{
 		return (-1);
 	}
-	else if ((*n == 0) || (sizeof(unsigned long int) * *n))
+	else if ((*n == 0) || (_pow(2, index) > *n))
 	{
 		*n = 0;
 	}
